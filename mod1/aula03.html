@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Desenvolvimento em Jquery</title>
+    <!--Usando CDN-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            /*
+            $('h1')
+            .css("color","#f66")
+            .hide()
+            .delay('1000')
+            .fadeIn("slow")
+            .text('Estudo JQuery')
+            .click(function(){
+                $("body")
+                .css("background","#C30")
+                $('h1')
+                .css("color","#fff")
+            });
+            */
+
+            $('a')
+                .css("color", "#C30")
+                .css("display", "block");
+            $('.link2')
+                .css("color", "green");
+            $('#link3')
+                .css("color", '#000');
+
+            $('*')
+                .css("margin", '0')
+                .css("padding", '10');
+            $('h1, #link3')
+                .css("border-bottom","solid 3px blue");
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <h1>Estudando JQuery</h1>
+
+    <a href="#">Link 01</a>
+    <a href="#" class="link2">Link 02</a>
+    <a href="#" id="link3">Link 03</a>
+</body>
+
+</html>
