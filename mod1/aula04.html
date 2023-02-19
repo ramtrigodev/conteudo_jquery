@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('h2')
+                .css('margin', '0');
+            $('p')
+                .css('margin', '0')
+                .css('color', 'blue');
+            $('.div1')
+                .css('margin-bottom', '20px')
+                .css('background', '#ccc');
+
+            //Filhas
+            $('.div1 span')
+                .hide().delay('1000')
+                .fadeIn(1000)
+                .css('color', 'green')
+                .css('font-size', '15px');
+            $('.div1 h2')
+                .hide()
+                .css('font-size', '50px')
+                .css('color','red')
+                .fadeIn(800);
+                //Filhas diretas do Elemento
+                $('div >span')
+                .css('color','red');
+                //Primeiro Elemento
+                $('.p1 + p')
+                .css('font-size','25px');
+                //Atacando todos elementos após selecionado
+                $('.p1 ~ p')
+                .css('color','black');
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="div1">
+        <h2>H2 filho do DIV1</h2>
+        <p>P filho de DIV1 <span>SPAN Filho de P</span></p>
+        <span>Span Filho Direto DIV1</span>
+    </div>
+    <h2>H2 fora da Div1</h2>
+    <p class="p1">P1 fora de Div1</p>
+    <p>P2 fora de DIV1</p>
+    <p>P3 fora de DIV1</p>
+</body>
+
+</html>
